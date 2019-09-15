@@ -1,6 +1,11 @@
 <?php
 
+include 'conf/gen.conf.php';
+include "core/controller.php";
+include "core/model.php";
 
-echo "Bruno HUDBERT test de modification";
+echo $page;
+
+echo "Page index normale";
 
 ?>

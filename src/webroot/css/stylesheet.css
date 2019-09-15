@@ -1,0 +1,117 @@
+#myheader {
+    height: 85px;
+    padding-top: 5px;
+    background-image: radial-gradient(circle at top left, #040416, #040416, #133055, #133055, #161677);
+
+}
+
+.mybrand {
+
+    float: left;
+    color: #fff;
+}
+
+.mybrand:hover {
+
+    color: #f06f14;
+}
+
+.mymenu {
+    text-align: right;
+    margin-right: 5px;
+    float: right;
+    text-transform: uppercase;
+}
+
+.mymenu ul{
+    margin-top: 7px;
+}
+
+
+.mymenu ul li {
+    margin: 1px 6px;
+    padding: 2px 1px;
+    font-size: 0.9em;
+}
+
+
+.mymenu ul li a{
+    font-size: 1.00em;
+}
+
+.mymenu ul li a:hover {
+    
+    color:#f06f14;
+}
+
+.mymenu ul li#active {
+    border-top: solid 2px #f06f14;
+    border-bottom: solid 2px #f06f14;
+
+
+}
+
+
+.mymenu ul li#active a svg {
+    stroke-width: 3;
+
+}
+
+.myconnectform {
+    padding: 0px;
+    float: right;
+}
+
+.myconnectform button {
+    font-size: 0.9em;
+    border-radius: 10px;
+    border: 0px solid #fff;
+}
+
+.mymain {
+
+    margin-top: 90px;
+}
+
+
+
+
+.mynotes main {
+    margin-left: 4px;
+    border-left: dashed 2px #333333;
+    background-color: #f1f1f1;
+    padding: 15px;
+
+}
+
+.mynotes h1 {
+    color: #333333;
+    font-size: 2.0em;
+    margin-bottom: 20px;
+    padding-left: 5px;
+
+}
+
+.mynotes h2 {
+    color: #a62929;
+    font-size: 1.5em;
+    padding: 0px 20px;
+}
+
+.mynotes p {
+    text-align: justify;
+    text-indent: 20px;
+    color: #666666;
+    font-size: 1.2em;
+    padding: 0px 50px;
+
+}
+
+h1.mynotes {}
+
+aside#mytabs{
+    display: block;
+    float:left;
+    width:200px;
+    background-color: #9f9;
+}
