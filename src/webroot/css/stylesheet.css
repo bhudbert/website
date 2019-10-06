@@ -142,12 +142,14 @@ footer p.copyright {
 }
 
 .minijumb {
-    background-color: #f1efff;
     font-weight: 800;
     margin-top: 1Opx;
     padding-top: 15px;
     padding-bottom: 5px;
-    border-bottom: 3px solid #133055;
+    
+   background-color: #ffffff;
+   # background-color: #f1efff;
+    # border-bottom: 2px solid #133055;
 
 }
 
