@@ -24,20 +24,13 @@
     <div style="margin:30px;">
 
 
-   <?php
-        include 'conf/gen.conf.php';
-        include "core/loader.php";
-        include "core/database.php";
+        <?php
+include 'conf/gen.conf.php';
+include "core/loader.php";
+include "core/database.php";
 
 
-        echo "<h1>Bruno HUDBERT</h1>";
-        echo "<hr style=\"	float:left;border-top: 3px double #8c8b8b;width:360px;\">";
-        echo "</br></br>Transfert du domaine vers VPS : OK";
-        echo "</br>SSL et redirection https : OK";
-
-        echo "</br>Developpement du site en cours :";
-        echo "</br>&nbsp;&nbsp;&nbsp;- Frontend : <a href=\"webroot\index.html\"> OK</a>";
-        echo "</br>&nbsp;&nbsp;&nbsp;- Backend PHP : Work in progress  -  <a href=\"backendaccess.php\"> OK</a>";
+echo "--== BACKEND ==--";
 
 
 

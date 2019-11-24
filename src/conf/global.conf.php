@@ -6,16 +6,23 @@
  * and open the template in the editor.
  */
 
-
+/** 
+ * 
+ * @package core
+ * @author Bruno HUDBERT <dev@bruno.hudbert.fr>
+ * @
+ * 
+ */
 class globalConf{
 
+    
     static $host = '192.168.122.10';
     static $port = '5432';
     static $username = 'postgres';
     static $password = 'mhu145P@lo';
     static $database = 'bruno_hudbert';
 
-
+    
 
 }
 

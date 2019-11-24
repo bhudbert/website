@@ -1,6 +1,6 @@
 body {
 
-    background: (#333333, #eeeeee);
+    background: linear-gradient(#333333, #eeeeee);
 
 }
 
@@ -14,14 +14,22 @@ body {
 }
 
 .mybrand {
-
-    float: left;
+   float: left;
+    color: #fff;
+}
+.myname {
+    padding-top: 10px;
+   float: right;
     color: #fff;
 }
 
-.mybrand:hover {
+.mybrand a:hover {
 
     color: #f06f14;
+}
+.mybrand a {
+
+    color: #ffffff;
 }
 
 .mymenu {
@@ -87,8 +95,8 @@ body {
 
 .mynotes main {
     margin-left: 4px;
-    < !-- border-left: dashed 2px #333333;
-    -- > background-color: #f1f1f1;
+    border-left: dashed 2px #333333;
+    background-color: #f1f1f1;
     padding: 15px;
 
 }
@@ -148,9 +156,7 @@ footer p.copyright {
     padding-bottom: 5px;
     
    background-color: #ffffff;
-   # background-color: #f1efff;
-    # border-bottom: 2px solid #133055;
-
+   
 }
 
 .jumbotron h1 {
@@ -170,12 +176,10 @@ a.btn-blue {
 
 a.btn-blue:hover {
     background-color: #6970a9;
-    # background-color: #5a5a9a;
     color: white;
 }
 
 a.btn-secondary:hover {
     background-color: #133055;
-    # background-color: #5a5a9a;
     color: white;
 }
