@@ -1,0 +1,23 @@
+index:
+    path: /
+    controller: App\Controller\IndexController::index
+
+blog:
+    path: /blog
+    controller: App\Controller\BlogController::index
+    
+courses:
+    path: /formations
+    controller: App\Controller\CoursesController::index
+
+courses-cat:
+    path: /formations/categories
+    controller: App\Controller\CoursesController::indexCategory
+
+tutorials:
+    path: /tutoriels
+    controller: App\Controller\TutorialsController::index
+
+contact:
+    path: /contact
+    controller: App\Controller\ContactController::index
