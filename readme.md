@@ -5,7 +5,7 @@ Welcome
 ## Roadmap 
 
 - [ ] Finalize UI with BootStrap 4
-- [ ] Development wint Symfony 5
+- [ ] Development with Symfony 5
 
 
 
