@@ -1,0 +1,29 @@
+footer{
+    margin-top:50px;
+    text-align:center;
+    background: #424242;
+    color:white;
+    height:35px;
+    line-height: 35px;
+}
+
+#trademark{
+    padding-top:15px;
+    padding-bottom:5px;
+    font-size:1.6em;
+    font-weight:600;
+
+}
+
+.myMainMenuFirstItem{
+    padding-top:8px;
+    margin-left:50px;
+    font-size:1.0em;
+    font-weight:400;
+
+}.myMainMenuItem{
+     padding-top:8px;
+     margin-left:15px;
+     font-size:1.0em;
+     font-weight:400;
+ }
