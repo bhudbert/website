@@ -5018,6 +5018,7 @@ html.is-reveal-open {
   font-weight: bold; }
 
 .top-bar {
+  background: linear-gradient(to right,#12305e, #175692);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5033,13 +5034,15 @@ html.is-reveal-open {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.5rem;
+  padding: 0.0rem;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+          flex-wrap: wrap;
+
+    }
   .top-bar,
   .top-bar ul {
-    background-color: #374c71; }
+    }
   .top-bar input {
     max-width: 200px;
     margin-right: 1rem; }
@@ -5096,6 +5099,8 @@ html.is-reveal-open {
             -ms-flex: 0 0 100%;
                 flex: 0 0 100%;
         max-width: 100%; } }
+
+
 
 .top-bar-title {
   -webkit-box-flex: 0;

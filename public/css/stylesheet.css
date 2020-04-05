@@ -1,29 +1,41 @@
 footer{
     margin-top:50px;
     text-align:center;
-    background: #424242;
+    background: linear-gradient(#175692, #12305e);
     color:white;
     height:35px;
     line-height: 35px;
 }
 
 #trademark{
-    padding-top:15px;
-    padding-bottom:5px;
-    font-size:1.6em;
-    font-weight:600;
-
+    display: block;
+    height: 50px;
+    padding:10px 20px 0px 10px;
+    font-size:1.5em;
+    font-weight:400;
+    color:white;
 }
 
-.myMainMenuFirstItem{
-    padding-top:8px;
-    margin-left:50px;
-    font-size:1.0em;
-    font-weight:400;
 
-}.myMainMenuItem{
-     padding-top:8px;
-     margin-left:15px;
-     font-size:1.0em;
-     font-weight:400;
+.top-bar ul li{
+    border-left: 1px dotted #cccccc;
+
+}
+.top-bar ul li:hover{
+    background-color: #666666;
+
+}
+.top-bar ul li a{
+     margin:0px;
+     padding:15px 30px 15px 30px;
+     height: 100%;
+ }
+
+
+#connexion{
+    background-color: #2f9afc;
+
+}#connexion:hover{
+     background-color: #333333;
+
  }
