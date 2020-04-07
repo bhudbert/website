@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Welcome!{% endblock %}</title>
@@ -12,19 +12,22 @@
 
 <navbar class="top-bar columns">
 
-    <a href="{{   path('home') }}"> <img src="{{   asset("img/logo.png") }}" style="height:35px;padding-left:10px;"></a>
+    <a href="{{   path('home') }}"> <img src="{{   asset("img/logo.png") }}" style="height:35px;padding-left:10px;"><a href="{{   path('home') }}" id="trademark">   Bruno&nbsp;HUDBERT&nbsp;&nbsp;&nbsp;&nbsp;</a>
     <div class="top-bar-left">
-        <a href="{{   path('home') }}" id="trademark">   Bruno&nbsp;HUDBERT</a>
+
+        <ul class="menu ">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Formations</a></li>
+            <li><a href="https://bruno.hudbert.fr">Portfolio</a></li>
+            <li><a href="https://bruno.hudbert.fr"></a></li>
+        </ul>
     </div>
 
     <div class="top-bar-right">
         <ul class="menu ">
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Formations</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#" id="last">CV</a></li>
+            <li><a href="{{   path('user_register') }}" id="last">Inscription</a></li>
 
-            <li><a href="#" id="connexion">Connexion</a></li>
+            <li><a href="{{   path('user_login') }}" id="connexion">Connexion</a></li>
         </ul>
     </div>
 </navbar>
