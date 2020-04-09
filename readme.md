@@ -1,14 +1,11 @@
 # My personnal website
 
-Welcome
+Welcome to my personnal website repo .
 
-## Roadmap 
-
-- [ ] Finalize UI with BootStrap 4
-- [ ] Development with Symfony 5
-
+I make it during my developper Symfony training 
 
 
 
 ![nom_de_l_image](https://img.shields.io/badge/happy&nbsp;to&nbsp;start-OK-green)
 
+²

@@ -1,12 +1,61 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="stylesheet" href="{{   asset("assets/css/app.css") }}">
+    <link rel="stylesheet" href="{{   asset("css/stylesheet.css") }}">
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+{# Body began #}
+
+<navbar class="top-bar columns">
+
+    <a href="{{   path('home') }}"> <img src="{{   asset("img/logo.png") }}" style="height:35px;padding-left:10px;"><a href="{{   path('home') }}" id="trademark">   Bruno&nbsp;HUDBERT&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <div class="top-bar-left">
+
+            <ul class="menu ">
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Formations</a></li>
+                <li><a href="https://bruno.hudbert.fr">Portfolio</a></li>
+                <li><a href="https://bruno.hudbert.fr"></a></li>
+            </ul>
+        </div>
+
+        <div class="top-bar-right">
+            <ul class="menu ">
+                <li><a href="{{   path('user_register') }}" id="last">Inscription</a></li>
+
+                <li><a href="{{   path('user_login') }}" id="connexion">Connexion</a></li>
+            </ul>
+        </div>
+</navbar>
+
+<br>
+
+<article class="page-content">
+
+    <div class="row">
+        <div class="medium-9 medium-centered columns">
+            <br>
+            <h4 class="text-center">
+                {% block body %}{% endblock %}
+            </h4>
+        </div>
+    </div>
+
+    <div class="row column"></div>
+</article>
+
+
+
+<footer class="row">
+    &copy; Bruno HUDBERT 2020
+
+</footer>
+
+{% block javascripts %}{% endblock %}
+<script src="{{   asset("assets/js/app.js") }}"></script>
+</body>
 </html>
