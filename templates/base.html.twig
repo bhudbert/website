@@ -14,19 +14,19 @@
 
     <a href="{{   path('home') }}"> <img src="{{   asset("img/logo.png") }}" style="height:35px;padding-left:10px;"><a href="{{   path('home') }}" id="trademark">   Bruno&nbsp;HUDBERT&nbsp;&nbsp;&nbsp;&nbsp;</a>
         <div class="top-bar-left">
-
+            {#
             <ul class="menu ">
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Formations</a></li>
                 <li><a href="https://bruno.hudbert.fr">Portfolio</a></li>
                 <li><a href="https://bruno.hudbert.fr"></a></li>
-            </ul>
+            </ul>   #}
         </div>
 
         <div class="top-bar-right">
-            <ul class="menu ">
+            <ul class="menu ">{#
                 <li><a href="{{   path('user_register') }}" id="last">Inscription</a></li>
-
+                #}
                 <li><a href="{{   path('user_login') }}" id="connexion">Connexion</a></li>
             </ul>
         </div>
