@@ -6,8 +6,8 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
- * @ORM\Table(name="users")
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @ORM\Table(name="`user`")
  */
 class User implements UserInterface
 {
@@ -19,168 +19,91 @@ class User implements UserInterface
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=35)
-     */
-    private $name;
-
-
-    /**
-     * @ORM\Column(type="string", length=45)
-     */
-    private $firstname;
-
-
-    /**
-     * @ORM\Column(type="string", length=45)
+     * @ORM\Column(type="string", length=180, unique=true)
      */
     private $username;
 
-
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="json")
      */
-    private $email;
+    private $roles = [];
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @var string The hashed password
+     * @ORM\Column(type="string")
      */
     private $password;
 
-    // Not saved in database
-    private $roles;
-
-    /**
-     * @ORM\Column(type="datetime")
-     */
-    private $createdAt;
-    /**
-     * @return mixed
-     */
-    public function getId()
+    public function getId(): ?int
     {
         return $this->id;
     }
 
     /**
-     * @param mixed $id
+     * A visual identifier that represents this user.
+     *
+     * @see UserInterface
      */
-    public function setId($id): void
+    public function getUsername(): string
     {
-        $this->id = $id;
+        return (string) $this->username;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param mixed $name
-     */
-    public function setName($name): void
-    {
-        $this->name = $name;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFirstname()
-    {
-        return $this->firstname;
-    }
-
-    /**
-     * @param mixed $firstname
-     */
-    public function setFirstname($firstname): void
-    {
-        $this->firstname = $firstname;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getUsername()
-    {
-        return $this->username;
-    }
-
-    /**
-     * @param mixed $username
-     */
-    public function setUsername($username): void
+    public function setUsername(string $username): self
     {
         $this->username = $username;
+
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @see UserInterface
      */
-    public function getEmail()
+    public function getRoles(): array
     {
-        return $this->email;
+        $roles = $this->roles;
+        // guarantee every user at least has ROLE_USER
+        $roles[] = 'ROLE_USER';
+
+        return array_unique($roles);
     }
 
-    /**
-     * @param mixed $email
-     */
-    public function setEmail($email): void
+    public function setRoles(array $roles): self
     {
-        $this->email = $email;
+        $this->roles = $roles;
+
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @see UserInterface
      */
-    public function getPassword()
+    public function getPassword(): string
     {
-        return $this->password;
+        return (string) $this->password;
     }
 
-    /**
-     * @param mixed $password
-     */
-    public function setPassword($password): void
+    public function setPassword(string $password): self
     {
         $this->password = $password;
+
+        return $this;
     }
 
     /**
-     * @return mixed
+     * @see UserInterface
      */
-    public function getRoles()
+    public function getSalt()
     {
-        return ["ROLE_USER"];
-    }
-
-
-
-    /**
-     * @return mixed
-     */
-    public function getCreatedAt()
-    {
-        return $this->createdAt;
+        // not needed when using the "bcrypt" algorithm in security.yaml
     }
 
     /**
-     * @param mixed $createdAt
+     * @see UserInterface
      */
-    public function setCreatedAt($createdAt): void
+    public function eraseCredentials()
     {
-        $this->createdAt = $createdAt;
+        // If you store any temporary, sensitive data on the user, clear it here
+        // $this->plainPassword = null;
     }
-
-
-    // Unused but needs for implemented UserInterface
-    public function getSalt() {  return null;    }
-
-    public function eraseCredentials()    {      }
-
-
-
 }

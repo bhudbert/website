@@ -36,7 +36,6 @@ class UserController extends AbstractController
            if($registerForm->isSubmitted() && $registerForm->isValid())
            {
                $user->setCreatedAt(new \DateTime());
-
                $hashed=$encoder->encodePassword($user,$user->getPassword());
 
                $user->setPassword($hashed);
