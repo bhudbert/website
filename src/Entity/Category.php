@@ -18,6 +18,19 @@ class Category
     private $id;
 
     /**
+     * @ORM\Column(type="string", length=35)
+     */
+    private $name;
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name): void
+    {
+        $this->name = $name;
+    }
+
+    /**
      * @return mixed
      */
     public function getName()
@@ -26,10 +39,15 @@ class Category
     }
 
 
+
+
     /**
-     * @ORM\Column(type="string", length=35)
+     * @param mixed $id
      */
-    private $name;
+    public function setId($id): void
+    {
+        $this->id = $id;
+    }
 
 
 
