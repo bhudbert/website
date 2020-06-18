@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Welcome!{% endblock %}</title>
+    <title>{% block title %}Bruno HUDBERT - Developpeur{% endblock %}</title>
     <link rel="stylesheet" href="{{   asset("assets/css/app.css") }}">
     <link rel="stylesheet" href="{{   asset("css/stylesheet.css") }}">
     {% block stylesheets %}{% endblock %}
@@ -10,30 +10,43 @@
 <body>
 {# Body began #}
 
-<navbar class="top-bar columns">
+<navbar class="top-bar row ">
 
-    <a href="{{   path('home') }}"> <img src="{{   asset("img/logo.png") }}" style="height:35px;padding-left:10px;"><a href="{{   path('home') }}" id="trademark">   Bruno&nbsp;HUDBERT&nbsp;&nbsp;&nbsp;&nbsp;</a>
-        <div class="top-bar-left">
-            {#
-            <ul class="menu ">
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Formations</a></li>
-                <li><a href="https://bruno.hudbert.fr">Portfolio</a></li>
-                <li><a href="https://bruno.hudbert.fr"></a></li>
-            </ul>   #}
+        <div class="columns large-4">
+
+            <a href="{{   path('home') }}" id="trademark">
+                <img src="{{   asset("img/logo.png") }}" style="height:30px;padding-left:10px;">
+                Bruno HUDBERT
+
+
+            </a>
+
         </div>
+        <div class="columns large-6  align-center">
+            <ul class="menu ">
+                <li><a href="{{   path('blog_home') }}">Blog</a></li>
+                <li><a href="{{   path('project_home') }}">Portfolio projets</a></li>
+                <li><a href="{{   path('trainings_home') }}">Formations</a></li>
+                <li class="menu-navbar-item-last"><a href="{{   path('aboutme') }}">Qui suis-je</a></li>
 
-        <div class="top-bar-right">
+
+            </ul>
+
+        </div>
+        <div class="columns large-3">
+
             <ul class="menu ">{#
                 <li><a href="{{   path('user_register') }}" id="last">Inscription</a></li>
                 #}
                 <li><a href="{{   path('user_login') }}" id="connexion">Connexion</a></li>
             </ul>
         </div>
+
+
 </navbar>
 
-<br>
 
+{% block callout %}{% endblock %}
 <article class="page-content">
 
     <div class="row">

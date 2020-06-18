@@ -35,7 +35,21 @@ footer{
 #connexion{
     background-color: #2f9afc;
 
-}#connexion:hover{
+}
+#connexion:hover{
      background-color: #333333;
 
  }
+
+li.menu-navbar-item-last{
+    border-right: solid 1px #8a8a8a;
+    #background: #fffc2a;
+
+}
+li.menu-navbar-item-last a{
+    font-weight: bold;
+    color:#fffc2a;
+
+ }
+
+
