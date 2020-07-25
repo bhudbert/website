@@ -1,4 +1,6 @@
 footer{
+    position:relative;
+    bottom:0px;
     margin-top:50px;
     text-align:center;
     background: linear-gradient(#175692, #12305e);

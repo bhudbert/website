@@ -5,9 +5,9 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\TrainingRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\FileRepository")
  */
-class Training
+class File
 {
     /**
      * @ORM\Id()
@@ -17,14 +17,14 @@ class Training
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=120)
+     * @ORM\Column(type="string", length=100)
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $description;
+    private $link;
 
     public function getId(): ?int
     {
@@ -43,14 +43,14 @@ class Training
         return $this;
     }
 
-    public function getDescription(): ?string
+    public function getLink(): ?string
     {
-        return $this->description;
+        return $this->link;
     }
 
-    public function setDescription(string $description): self
+    public function setLink(string $link): self
     {
-        $this->description = $description;
+        $this->link = $link;
 
         return $this;
     }

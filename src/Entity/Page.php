@@ -28,7 +28,7 @@ class Page
      */
     private $slug;
 
-    /**
+    /**Gallery
      * @ORM\Column(type="text")
      */
     private $description;
@@ -43,9 +43,15 @@ class Page
      */
     private $technology;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Gallery")
+     */
+    private $Galleries;
+
     public function __construct()
     {
         $this->technology = new ArrayCollection();
+        $this->Galleries = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -122,6 +128,32 @@ class Page
     {
         if ($this->technology->contains($technology)) {
             $this->technology->removeElement($technology);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Gallery[]
+     */
+    public function getGalleries(): Collection
+    {
+        return $this->Galleries;
+    }
+
+    public function addGallery(Gallery $gallery): self
+    {
+        if (!$this->Galleries->contains($gallery)) {
+            $this->Galleries[] = $gallery;
+        }
+
+        return $this;
+    }
+
+    public function removeGallery(Gallery $gallery): self
+    {
+        if ($this->Galleries->contains($gallery)) {
+            $this->Galleries->removeElement($gallery);
         }
 
         return $this;

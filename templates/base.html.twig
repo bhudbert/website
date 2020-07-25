@@ -12,17 +12,17 @@
 
 <navbar class="top-bar row ">
 
-        <div class="columns large-4">
+        <div class="columns large-3">
 
-            <a href="{{   path('home') }}" id="trademark">
-                <img src="{{   asset("img/logo.png") }}" style="height:30px;padding-left:10px;">
-                Bruno HUDBERT
+            <a href="{{   path('home') }}" id="trademark"  style="height:60px;padding-left:10px;padding-bottom:45px;">
+                <img src="{{   asset("img/logo.png") }}" style="height:60px;padding-left:10px;" >
 
 
+                <span>&nbsp;Bruno HUDBERT</span>
             </a>
 
         </div>
-        <div class="columns large-6  align-center">
+        <div class="columns large-7  align-center">
             <ul class="menu ">
                 <li><a href="{{   path('blog_home') }}">Blog</a></li>
                 <li><a href="{{   path('project_home') }}">Portfolio projets</a></li>
@@ -38,7 +38,7 @@
             <ul class="menu ">{#
                 <li><a href="{{   path('user_register') }}" id="last">Inscription</a></li>
                 #}
-                <li><a href="{{   path('user_login') }}" id="connexion">Connexion</a></li>
+                <li><a href="{{   path('user_login') }}" id="connexion" style="margin-right:10px;">Connexion</a></li>
             </ul>
         </div>
 
