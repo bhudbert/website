@@ -1,4 +1,4 @@
-@import '../../node_modules/foundation-sites/scss/foundation';
+@import './node_modules/foundation-sites/scss/foundation';
 
 
 // Global styles
@@ -59,73 +59,68 @@
 
 
 bar{
-  background: linear-gradient(#175692, #12305e);
+    background: linear-gradient(#175692, #12305e);
 }
 
 
 #trademark{
-  display: block;
-  height: 50px;
-  padding:10px 20px 0px 10px;
-  font-size:1.5em;
-  font-weight:400;
-  color:white;
+    display: block;
+    height: 50px;
+    padding:10px 20px 0px 10px;
+    font-size:1.5em;
+    font-weight:400;
+    color:white;
 }
 
 .top-bar{
-  @extend bar;
-  height: 50px;
+    @extend bar;
+    height: 50px;
 
 }
 .top-bar ul {
-  background-color: transparent;
-       li{
-            border-left: 1px dotted #cccccc;
-                :hover{
-                  background-color: #666666;
-                }
+    background-color: transparent;
+    li{
+        border-left: 1px dotted #cccccc;
+        &:hover{
+            background-color: #666666;
+        }
 
-            a{
-              margin:0px;
-              padding:15px 30px 15px 30px;
-              height: 100%;
-              color: #ffffff;
-             }
+        a{
+            margin:0px;
+            padding:15px 30px 15px 30px;
+            height: 100%;
+            color: #ffffff;
+        }
 
-            &.menu-navbar-item-last{
-                border-right: solid 1px #8a8a8a;
-                #background: #fffc2a;
+        &.menu-navbar-item-last {
+            border-right: solid 1px #8a8a8a;
+             a{
+                font-weight: bold;
+                color:#fffc2a;
 
-                a{
-                  font-weight: bold;
-                  color:#fffc2a;
-
-                }
-             }
-       }
-  }
-
-
-  #connexion{
-    background-color: #2f9afc;
-      a{
-        color: #ffffff;
-      }
-    :hover{
-      background-color: #333333;
+            }
+        }
     }
-  }
-
-
-footer{
-  @extend bar;
-  bottom:0px;
-  margin-top:50px;
-  text-align:center;
-  color:white;
-  height:35px;
-  line-height: 35px;
 }
 
 
+#connexion{
+    background-color: #2f9afc;
+    a{
+        color: #ffffff;
+    }
+    &:hover{
+        background-color: #333333;
+    }
+}
 
+
+footer{
+    @extend bar;
+    bottom:0px;
+    margin-top:50px;
+    text-align:center;
+    color:white;
+    height:35px;
+    line-height: 35px;
+}
