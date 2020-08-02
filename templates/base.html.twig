@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Bruno HUDBERT - Developpeur{% endblock %}</title>
-    <link rel="stylesheet" href="{{   asset("assets/css/app.css") }}">
     <link rel="stylesheet" href="{{   asset("css/stylesheet.css") }}">
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
+<div class="container">
 {# Body began #}
 
 <navbar class="top-bar row ">
@@ -47,10 +49,10 @@
 
 
 {% block callout %}{% endblock %}
-<article class="page-content">
+<div class="container">
 
-    <div class="row">
-        <div class="medium-9 medium-centered columns">
+    <div class="main-section">
+        <div class="medium-10 medium-centered columns">
             <br>
             <h4 class="text-center">
                 {% block body %}{% endblock %}
@@ -59,7 +61,7 @@
     </div>
 
     <div class="row column"></div>
-</article>
+</div>
 
 
 
@@ -67,8 +69,9 @@
     &copy; Bruno HUDBERT 2020
 
 </footer>
-
+</div>
 {% block javascripts %}{% endblock %}
 <script src="{{   asset("assets/js/app.js") }}"></script>
+
 </body>
 </html>
