@@ -1,122 +1,22 @@
 @import './node_modules/foundation-sites/scss/foundation';
+@import "foundation/settings";
+@import "foundation/includes";
+@import './node_modules/motion-ui/src/motion-ui';
 
+@include motion-ui-transitions;
+@include motion-ui-animations;
 
-// Global styles
-@include foundation-global-styles;
-@include foundation-forms;
-@include foundation-typography;
+@import "navbar";
 
-// Grids (choose one)
-@include foundation-xy-grid-classes;
-//@include foundation-grid;
-//@include foundation-flex-grid;
-
-// Generic components
-@include foundation-button;
-@include foundation-button-group;
-@include foundation-close-button;
-@include foundation-label;
-//@include foundation-progress-bar;
-//@include foundation-slider;
-//@include foundation-switch;
-@include foundation-table;
-// Basic components
-@include foundation-badge;
-@include foundation-breadcrumbs;
-@include foundation-callout;
-@include foundation-card;
-@include foundation-dropdown;
-@include foundation-pagination;
-//@include foundation-tooltip;
-
-// Containers
-//@include foundation-accordion;
-@include foundation-media-object;
-//@include foundation-orbit;
-//@include foundation-responsive-embed;
-//@include foundation-tabs;
-//@include foundation-thumbnail;
-
-// Menu-based containers
-@include foundation-menu;
-@include foundation-menu-icon;
-//@include foundation-accordion-menu;
-//@include foundation-drilldown-menu;
-//@include foundation-dropdown-menu;
-
-// Layout components
-//@include foundation-off-canvas;
-@include foundation-reveal;
-//@include foundation-sticky;
-@include foundation-title-bar;
-@include foundation-top-bar;
-
-// Helpers
-@include foundation-float-classes;
-@include foundation-flex-classes;
-@include foundation-visibility-classes;
-// @include foundation-prototype-classes;
-
-
-bar{
-    background: linear-gradient(#175692, #12305e);
-}
-
-
-#trademark{
-    display: block;
-    height: 50px;
-    padding:10px 20px 0px 10px;
-    font-size:1.5em;
-    font-weight:400;
-    color:white;
-}
-
-.top-bar{
-    @extend bar;
-    height: 50px;
-
-}
-.top-bar ul {
-    background-color: transparent;
-    li{
-        border-left: 1px dotted #cccccc;
-        &:hover{
-            background-color: #666666;
-        }
-
-        a{
-            margin:0px;
-            padding:15px 30px 15px 30px;
-            height: 100%;
-            color: #ffffff;
-        }
-
-        &.menu-navbar-item-last {
-            border-right: solid 1px #8a8a8a;
-             a{
-                font-weight: bold;
-                color:#fffc2a;
-
-            }
-        }
-    }
-}
-
-
-#connexion{
-    background-color: #2f9afc;
-    a{
-        color: #ffffff;
-    }
-    &:hover{
-        background-color: #333333;
-    }
+callout{
+    border-radius: 20px;
+    max-width: 1280px;
 }
 
 
 footer{
-    @extend bar;
+
+    background: linear-gradient(#175692, #12305e);
     bottom:0px;
     margin-top:50px;
     text-align:center;

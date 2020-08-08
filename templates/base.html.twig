@@ -11,67 +11,23 @@
 <body>
 <div class="container">
 {# Body began #}
-
-<navbar class="top-bar row ">
-
-        <div class="columns large-3">
-
-            <a href="{{   path('home') }}" id="trademark"  style="height:60px;padding-left:10px;padding-bottom:45px;">
-                <img src="{{   asset("img/logo.png") }}" style="height:60px;padding-left:10px;" >
-
-
-                <span>&nbsp;Bruno HUDBERT</span>
-            </a>
-
+    {% include '_navbar.twig.php' %}
+    {% block callout %}{% endblock %}
+    <div class="grid-container">
+        <div class="header">
+            {% block header %}{% endblock %}
         </div>
-        <div class="columns large-7  align-center">
-            <ul class="menu ">
-                <li><a href="{{   path('blog_home') }}">Blog</a></li>
-                <li><a href="{{   path('project_home') }}">Portfolio projets</a></li>
-                <li><a href="{{   path('trainings_home') }}">Formations</a></li>
-                <li class="menu-navbar-item-last"><a href="{{   path('aboutme') }}">Qui suis-je</a></li>
-
-
-            </ul>
-
-        </div>
-        <div class="columns large-3">
-
-            <ul class="menu ">{#
-                <li><a href="{{   path('user_register') }}" id="last">Inscription</a></li>
-                #}
-                <li><a href="{{   path('user_login') }}" id="connexion" style="margin-right:10px;">Connexion</a></li>
-            </ul>
-        </div>
-
-
-</navbar>
-
-
-{% block callout %}{% endblock %}
-<div class="container">
-
-    <div class="main-section">
-        <div class="medium-10 medium-centered columns">
-            <br>
-            <h4 class="text-center">
-                {% block body %}{% endblock %}
-            </h4>
+        <div class="main-section">
+            {% block body %}{% endblock %}
         </div>
     </div>
 
-    <div class="row column"></div>
-</div>
-
-
-
-<footer class="row">
-    &copy; Bruno HUDBERT 2020
-
-</footer>
+    <footer class="row">
+        &copy; Bruno HUDBERT 2020
+    </footer>
 </div>
 {% block javascripts %}{% endblock %}
-<script src="{{   asset("assets/js/app.js") }}"></script>
+<script src="{{   asset("build/app.js") }}"></script>
 
 </body>
 </html>

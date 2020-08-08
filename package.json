@@ -16,6 +16,7 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "foundation-sites": "^6.6.3"
+        "foundation-sites": "^6.6.3",
+        "motion-ui": "^2.0.3"
     }
 }
