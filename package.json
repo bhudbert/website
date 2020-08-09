@@ -13,11 +13,13 @@
         "dev-server": "encore dev-server",
         "dev": "encore dev",
         "watch": "encore dev --watch",
-        "build": "encore production --progress"
+        "build": "encore production --progress",
+
     },
     "dependencies": {
+        "autoprefixer": "^9.8.6",
         "foundation-sites": "^6.6.3",
-        "jQuery": "^1.7.4",
+        "jquery": "^3.5.1",
         "motion-ui": "^2.0.3"
     }
 }
