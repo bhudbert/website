@@ -7,19 +7,31 @@
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
+    <br><br>
 
-<div class="example-wrapper">
-    <h1>Connexion</h1>
+    <div class="grid-x grid-margin-x ">
+        <div class="cell large-4"></div>
+        <div class="callout light cell large-4">
+            <h4>Entrez vos identifiants</h4>
+            <form method="post">
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"  >
 
-    <form method="post">
-       <label for="username">Username</label>
-       <input type="text" name="_username" id="username" />
+                <label for="username">Nom d'utilisateur </label>
+                <input type="text" name="_username" id="username" />
 
-       <label for="password">Password</label>
-       <input type="password" name="_password" id="password" />
+                <label for="password">Mot de passe</label>
+                <input type="password" name="_password" id="password" />
+                <div class="text-center">
+                    <button type="cancel" class="button hollow primary">Annuler</button>
+                    <button type="submit" class="button">Envoyer</button>
+                </div>
+            </form>
 
-       <button type="submit" class="button">Envoyer</button>
-    </form>
+        </div>
+    </div>
+    </div>
+
+
 
 </div>
 {% endblock %}
