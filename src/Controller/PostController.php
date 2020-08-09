@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 /**
  * @Route("/blog", name="blog_")
+ *
  */
 class PostController extends AbstractController
 {

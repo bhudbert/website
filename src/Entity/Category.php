@@ -3,10 +3,12 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
- * @ORM\Table(name="catrgories")
+ * @ORM\Table(name="categories")
  * @ORM\Entity(repositoryClass="App\Repository\CategoryRepository")
+ * @UniqueEntity("name",message="Attention cette formation existe deja")
  */
 class Category
 {

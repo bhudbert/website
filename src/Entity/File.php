@@ -3,9 +3,12 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
+ * @ORM\Table(name="files")
  * @ORM\Entity(repositoryClass="App\Repository\FileRepository")
+ * @UniqueEntity("name",message="Attention un fichier du meme nom existe deja")
  */
 class File
 {

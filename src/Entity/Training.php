@@ -3,9 +3,13 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
+ * @ORM\Table(name="trainings")
  * @ORM\Entity(repositoryClass="App\Repository\TrainingRepository")
+ * @UniqueEntity("name",message="Attention cette formation existe deja")
+
  */
 class Training
 {
