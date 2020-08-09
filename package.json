@@ -17,6 +17,7 @@
     },
     "dependencies": {
         "foundation-sites": "^6.6.3",
+        "jQuery": "^1.7.4",
         "motion-ui": "^2.0.3"
     }
 }
