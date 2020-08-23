@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Bruno HUDBERT - Developpeur{% endblock %}</title>
+    <link rel="stylesheet" href="{{   asset("build/app.css") }}">
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+<div class="container">
+{# Body began #}
+    {% include 'backoffice/_partials/navbar.twig.php' %}
+    {% block callout %}{% endblock %}
+    <div class="grid-container padding-2 margin-vertical-0">
+        <div class="header">
+            {% block header %}{% endblock %}
+        </div>
+        <div class="main-section">
+            {% block body %}{% endblock %}
+        </div>
+    </div>
+
+
+</div>
+{% block javascripts %}{% endblock %}
+<script src="{{   asset("build/app.js") }}"></script>
+<script src="{{   asset("vendor/js/jquery.js") }}"></script>
+<!-- Other JS plugins can be included here -->
+
+
+</body>
+</html>
