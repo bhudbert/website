@@ -35,7 +35,8 @@ class UserController extends AbstractController
            $registerForm->handleRequest($request);
            if($registerForm->isSubmitted() && $registerForm->isValid())
            {
-               $user->setCreatedAt(new \DateTime());
+               // No CreatedAt in App/Entity/User for now
+              // $user->setCreatedAt(new \DateTime());
                $hashed=$encoder->encodePassword($user,$user->getPassword());
 
                $user->setPassword($hashed);
@@ -57,7 +58,7 @@ class UserController extends AbstractController
     }
 
     /**
-     * @Route("/logout", name="user_logout")
+     * @Route("/logout", name="_logout")
      */
     public function logout(){}
 }

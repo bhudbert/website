@@ -7,6 +7,27 @@
 
 
     <h1>Blog Backoffice</h1>
+    <table>
+        <tr>
+            <td>Id</td> <td>Nom</td><td>&nbsp;</td>
+        </tr>
+        {% for post in posts %}
+            <tr>
+                <td>{{ post.id }}</td><td>{{ post.name }}</td>
+                <td>
+                    <a href="{{   path('admin_blog_edit',{'id':post.id}) }}" class="button neutral-light"> Editer</a>
+                    <a href="{{   path('admin_blog_edit',{'id':post.id}) }}" class="button neutral"> Editer</a>
+                    <a href="{{   path('admin_blog_edit',{'id':post.id}) }}" class="button secondary"> Editer</a>
+                    <a href="{{   path('admin_blog_edit',{'id':post.id}) }}" class="button primary"> Editer</a>
+                    <a href="{{   path('admin_blog_edit',{'id':post.id}) }}" class="button success"> Editer</a>
+
+                </td>
+
+            </tr>
+        {% endfor %}
+
+    </table>
+
 
 
 

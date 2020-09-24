@@ -1,9 +1,15 @@
 
 navbar{
-  background: linear-gradient(to left ,#175692, #12305e);
   height: 65px;
   padding:15px;
 
+    &#front{
+      background: linear-gradient(to left , #175692, #12305e);;
+    }
+
+    &#admin{
+      background: linear-gradient(to top , #12305e, #3581cb);
+    }
 
   img#logo{
   width:55px;
@@ -60,18 +66,22 @@ ul.menu {
   }
 }
 
-a#connexion{
-  background-color: #2f9afc;
+
+
+a.navbar-button{
+
   font-size:1.0em;
   color: #ffffff;
-  padding: 12px;
-  margin: 10px;
+  padding: 12px 12px 8px 12px;
+  margin: 10px 5px;
   border:solid 1px transparent;
 
-  &:hover{
-    background-color: #1e5590;
-    border: $white 1px solid;
-  }
+
+
+    &:hover{
+      background-color: #1e5590;
+      border: $white 1px solid;
+    }
 
 }
 

@@ -12,8 +12,6 @@ class DefaultController extends AbstractController
      */
     public function index()
     {
-        return $this->render('frontoffice/main/index.html.twig', [
-            'controller_name' => 'AdminController',
-        ]);
+        return $this->render('frontoffice/main/index.html.twig');
     }
 }

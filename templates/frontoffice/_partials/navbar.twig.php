@@ -1,4 +1,4 @@
-<navbar class="top-bar row">
+<navbar class="top-bar row" id="front">
     <div class="columns width-25 ">
         <a href="{{   path('home') }}" id="trademark" >
             <img id="logo" src="{{   asset("img/logo.png") }}">
@@ -14,6 +14,12 @@
         </ul>
     </div>
     <div class="columns width-25">
-         <a href="{{   path('user_login') }}" id="connexion"  class="button float-right">Connexion</a>
+        {% if app.user %}
+        <a href="{{   path('user_logout') }}" id="logout"  class="button navbar-button alert float-right">Deconnexion</a>
+        <a href="{{   path('admin') }}" id="administration"  class="button navbar-button  primary-light   float-right">Administration</a>
+        {% else %}
+        <a href="{{   path('user_login') }}" class="button white navbar-button primary float-right" id="login" >Connexion</a>
+        <a href="{{   path('user_register') }}" id="register"  class="button primary-light  navbar-button float-right">S'inscrire</a>
+        {% endif %}
     </div>
 </navbar>
