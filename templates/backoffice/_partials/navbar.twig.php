@@ -10,7 +10,7 @@
             <li><a href="{{   path('admin_blog_home') }}">Blog</a></li>
             <li><a href="{{   path('admin_project_home') }}">Projets</a></li>
             <li><a href="{{   path('admin_trainings_home') }}">Formations</a></li>
-            <li class="menu-navbar-item-last"><a href="{{   path('aboutme') }}">Qui suis-je</a></li>
+            <li class="menu-navbar-item-last"><a href="{{   path('aboutme') }}">Infos</a></li>
         </ul>
     </div>
     <div class="columns width-25">

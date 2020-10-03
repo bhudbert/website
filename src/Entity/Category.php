@@ -53,8 +53,6 @@ class Category
     }
 
 
-
-
     /**
      * @param mixed $id
      */
@@ -62,8 +60,6 @@ class Category
     {
         $this->id = $id;
     }
-
-
 
     public function getId(): ?int
     {
