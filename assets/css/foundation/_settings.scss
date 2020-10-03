@@ -70,14 +70,14 @@ $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
 
-  primary: #12305e,
-  secondary: #2f9afc,
-  success: #00ff8e,
-  warning: #fffc2a,
+  primary: #1f4680,
+  secondary: #67aef5,
+  success: #57de67,
+  warning: #ffca2a,
   alert: #cc4b37,
   primary-light:#fefefe,
   neutral: #5a5a5a,
-  neutral-light: #9c9a9a,
+  neutral-light: #e0e0e0,
 );
 $light-gray: #f3f3f3;
 $medium-gray: #cacaca;
@@ -300,7 +300,7 @@ $breadcrumbs-item-separator-color: $medium-gray;
 $button-font-family: inherit;
 $button-font-weight: null;
 $button-padding: 0.85em 1em 0.6em 1em;
-$button-margin: 0 0 $global-margin 0;
+$button-margin: 0.0em 0.2em ;
 $button-fill: solid;
 $button-background: $primary-color;
 $button-background-hover: scale-color($button-background, $lightness: -15%);
@@ -804,19 +804,20 @@ $switch-cursor-disabled: not-allowed;
 
 $table-background: $white;
 $table-color-scale: 5%;
-$table-border: 1px solid smart-scale($table-background, $table-color-scale);
+$table-border: 1px solid smart-scale($primary-color, $table-color-scale);
 $table-padding: rem-calc(8 10 10);
 $table-hover-scale: 2%;
 $table-row-hover: darken($table-background, $table-hover-scale);
 $table-row-stripe-hover: darken($table-background, $table-color-scale + $table-hover-scale);
 $table-is-striped: true;
-$table-striped-background: smart-scale($table-background, $table-color-scale);
+$table-striped-background: smart-scale($table-background, 10%);
 $table-stripe: even;
-$table-head-background: smart-scale($table-background, $table-color-scale / 2);
-$table-head-row-hover: darken($table-head-background, $table-hover-scale);
+$table-head-background: smart-scale($primary-color, 0%);;
+//$table-head-background: smart-scale($table-background, $table-color-scale / 2);
+$table-head-row-hover: darken($table-head-background, 30%);
 $table-foot-background: smart-scale($table-background, $table-color-scale);
 $table-foot-row-hover: darken($table-foot-background, $table-hover-scale);
-$table-head-font-color: $body-font-color;
+$table-head-font-color: $white;
 $table-foot-font-color: $body-font-color;
 $show-header-for-stacked: false;
 $table-stack-breakpoint: medium;

@@ -4,7 +4,7 @@ navbar{
   padding:15px;
 
     &#front{
-      background: linear-gradient(to left , #175692, #12305e);;
+      background: linear-gradient(to left , #175692, #12305e);
     }
 
     &#admin{
@@ -53,9 +53,11 @@ ul.menu {
 
       a{
         font-weight: bold;
-        color:#fffc2a;
       }
 
+      a.me{
+        color:#fffc2a;
+      }
     }
     &:hover{
       background-color: #175692;

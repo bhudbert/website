@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/admin/blog", name="admin_blog_")
+ * @Route("/admin/blog", name="admin_blog")
  *
  */
 class PostController extends AbstractController
@@ -33,7 +33,7 @@ class PostController extends AbstractController
     }
 
     /**
-     * @Route("/", name="home")
+     * @Route("/", name="_home")
      */
     public function index()
     {
@@ -44,9 +44,54 @@ class PostController extends AbstractController
     }
 
     /**
-     * @Route("/edit/{id<\d+>?0}", name="edit")
+     * @Route("/edit/{id<\d+>?0}", name="_edit")
      */
     public function edit($id,Request $request)
+    {
+        if($id==0) {
+            $post = new Post();
+        }
+        else{
+            $post= $this->repository->find($id);
+        }
+
+        $postForm = $this->createForm(PostType::class,$post);
+
+        $postForm->handleRequest($request);
+        if($postForm->isSubmitted()){
+            $this->em->persist($post);
+            $this->em->flush();
+
+            return $this->redirectToRoute("admin_blog_home");
+        }
+        return $this->render('backoffice/post/edit.html.twig', [
+            "postForm"=>$postForm->createView(),
+        ]);
+    }
+    public function delete($id,Request $request)
+    {
+        if($id==0) {
+            $post = new Post();
+        }
+        else{
+            $post= $this->repository->find($id);
+        }
+
+        $postForm = $this->createForm(PostType::class,$post);
+
+        $postForm->handleRequest($request);
+        if($postForm->isSubmitted()){
+            $this->em->persist($post);
+            $this->em->flush();
+
+            return $this->redirectToRoute("admin_blog_home");
+        }
+        return $this->render('backoffice/post/edit.html.twig', [
+            "postForm"=>$postForm->createView(),
+        ]);
+    }
+
+    public function publish($id,Request $request)
     {
         if($id==0) {
             $post = new Post();

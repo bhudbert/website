@@ -4,20 +4,30 @@
 
 
 {% block body %}
-    <p>Username: {{ app.user.username }}</p>
+    <div class="grid-x">
+        <div class="cell small-6 float-left">
+            <h3>Nouveau Post</h3>
+        </div>
+        <div class="cell small-6">
+            <a href="{{ path('admin_blog_home') }}" class="button secondary float-right">Publier</a>
+        </div>
+    </div>
 
-    <h2>Nouveau Post</h2>
     {{ form_start(postForm) }}
     {{ form_row (postForm.name) }}
     {{ form_row (postForm.title) }}
     {{ form_row (postForm.slug) }}
     {{ form_row (postForm.description) }}
+    {{ form_row (postForm.category) }}
     {{ form_row (postForm.content) }}
 
     <br>
-    <div class="button-group float-right">
-        <a href="" class="button" type="cancel">Annuler</a>
-        <input class="button primary" type="submit">
+    <div class="float-left ">
+        <a href="{{ path('admin_blog_home') }}" class="button alert" type="cancel">Supprimer</a>
+    </div>
+    <div class="float-right ">
+        <a href="{{ path('admin_blog_home') }}" class="button neutral-light">Annuler</a>
+        <input class="button success" type="submit" value="Valider">
 
     </div>
 
