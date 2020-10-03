@@ -10,7 +10,7 @@
             <li><a href="{{   path('blog_home') }}">Blog</a></li>
             <li><a href="{{   path('project_home') }}">Portfolio projets</a></li>
             <li><a href="{{   path('trainings_home') }}">Formations</a></li>
-            <li class="menu-navbar-item-last"><a href="{{   path('aboutme') }}">Qui suis-je</a></li>
+            <li class="menu-navbar-item-last"><a href="{{   path('aboutme') }}" class="me">Qui suis-je</a></li>
         </ul>
     </div>
     <div class="columns width-25">

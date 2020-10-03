@@ -5,21 +5,25 @@
 
 {% block body %}
 
+    <div class="grid-x">
+        <div class="cell small-6"><h3>Posts</h3></div>
+        <div class="cell small-6">  <a href="{{   path('admin_blog_edit') }}" class="button success float-right margin-right-1"> Ajouter</a></div>
+    </div>
 
-    <h1>Blog Backoffice</h1>
     <table>
-        <tr>
+        <thead>
             <td>Id</td> <td>Nom</td><td>&nbsp;</td>
-        </tr>
+        </thead>
         {% for post in posts %}
             <tr>
-                <td>{{ post.id }}</td><td>{{ post.name }}</td>
-                <td>
-                    <a href="{{   path('admin_blog_edit',{'id':post.id}) }}" class="button neutral-light"> Editer</a>
-                    <a href="{{   path('admin_blog_edit',{'id':post.id}) }}" class="button neutral"> Editer</a>
-                    <a href="{{   path('admin_blog_edit',{'id':post.id}) }}" class="button secondary"> Editer</a>
-                    <a href="{{   path('admin_blog_edit',{'id':post.id}) }}" class="button primary"> Editer</a>
-                    <a href="{{   path('admin_blog_edit',{'id':post.id}) }}" class="button success"> Editer</a>
+                <td class="width-25">{{ post.id }}</td>
+                <td class="width-25">{{ post.name }}</td>
+                <td class="width-50">
+                    <a href="{{   path('admin_blog_edit',{'id':post.id}) }}" class="button small primary float-right"> Editer</a>
+
+                    <a href="{{   path('admin_blog_edit',{'id':post.id}) }}" class="button neutral small float-right"> Publier</a>
+
+                    <a href="{{   path('admin_blog_edit',{'id':post.id}) }}" class="button small alert  float-right"> Supprimer</a>
 
                 </td>
 

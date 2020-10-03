@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+<br><br>
+<div class="container">
+
+    <div class="alert alert-danger ">
+    <h1> Oups : Acces non autorisé</h1>
+    <br>
+    <h3> Il semble que vous ne soyez pas autorisé a acceder a cette page </h3>
+    <br>
+    <h3> Profitez en pour decouvrir les <a href="{{ path('home') }}" >sorties</a> </h3>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -25,12 +25,12 @@
         "symfony/security-bundle": "*",
         "symfony/serializer-pack": "*",
         "symfony/string": "*",
-        "symfony/translation": "*",
         "symfony/twig-pack": "*",
         "symfony/validator": "*",
         "symfony/web-link": "*",
         "symfony/webpack-encore-bundle": "^1.7",
-        "symfony/yaml": "*"
+        "symfony/yaml": "*",
+        "vich/uploader-bundle": "^1.15"
     },
     "require-dev": {
         "doctrine/doctrine-fixtures-bundle": "^3.3",
