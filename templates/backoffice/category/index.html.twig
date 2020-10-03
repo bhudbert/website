@@ -1,12 +1,29 @@
- {% extends 'backoffice/_layouts/base.html.twig' %}
+{% extends 'backoffice/_layouts/base.html.twig' %}
 
 {% block title %}{% endblock %}
 
+
 {% block body %}
 
-    <div>
-        <h1> Categories  </h1>
-
-
+    <div class="grid-x">
+        <div class="cell small-6"><h3>Categories</h3></div>
+        <div class="cell small-6">  <a href="{{   path('admin_category_edit') }}" class="button success float-right margin-right-1"> Ajouter</a></div>
     </div>
+
+    <table>
+        <thead>
+        <td>Id</td> <td>Nom</td><td>&nbsp;</td>
+        </thead>
+        {% for category in categories %}
+            <tr>
+                <td class="width-25">{{ category.id }}</td>
+                <td class="width-25">{{ category.name }}</td>
+                <td class="width-50">
+                    <a href="{{   path('admin_category_home',{'id':category.id}) }}" class="button small primary float-right"> Editer</a>
+                    <a href="{{   path('admin_category_home',{'id':category.id}) }}" class="button neutral small float-right"> Publier</a>
+                    <a href="{{   path('admin_category_home',{'id':category.id}) }}" class="button small alert  float-right"> Supprimer</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
 {% endblock %}

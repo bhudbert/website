@@ -10,13 +10,13 @@
             <li><a href="{{   path('admin_blog_home') }}">Blog</a></li>
             <li><a href="{{   path('admin_project_home') }}">Projets</a></li>
             <li><a href="{{   path('admin_trainings_home') }}">Formations</a></li>
-            <li class="menu-navbar-item-last"><a href="{{   path('aboutme') }}">Infos</a></li>
+            <li class="menu-navbar-item-last"><a href="{{   path('admin_global_settings') }}">Général</a></li>
         </ul>
     </div>
     <div class="columns width-25">
         {% if app.user %}
         <a href="{{   path('user_logout') }}" id="logout"  class="button navbar-button alert float-right">Deconnexion</a>
-        <a href="{{   path('admin') }}" id="administration"  class="button navbar-button  primary-light   float-right">Administration</a>
+        <a href="{{   path('home') }}" id="administration"  class="button navbar-button  primary-light   float-right">Site Web</a>
 
         {% else %}
         <a href="{{   path('user_login') }}" class="button white navbar-button primary float-right" id="login" >Connexion</a>
@@ -24,6 +24,17 @@
         {% endif %}
     </div>
 </navbar>
+{% if app.request.get('_route') == 'admin_global_settings' %}
+    <navbar class="top-bar row" id="sub-admin">
+        <div class="columns width-100 text-center">
+            <ul class="submenu">
+                <li class=""><a href="{{   path('admin_category_home') }}">Technologies</a></li>
+                <li class=""><a href="{{   path('admin_category_home') }}">Categories</a></li>
+                <li class=""><a href="{{   path('admin_category_home') }}">Galleries</a></li>
+            </ul>
+        </div>
 
+    </navbar>
+{% endif %}
 
 

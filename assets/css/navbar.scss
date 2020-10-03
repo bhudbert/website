@@ -1,21 +1,12 @@
 
 navbar{
-  height: 65px;
   padding:15px;
 
-    &#front{
-      background: linear-gradient(to left , #175692, #12305e);
-    }
-
-    &#admin{
-      background: linear-gradient(to top , #12305e, #3581cb);
-    }
-
   img#logo{
-  width:55px;
-  height:55px;
-  margin:5px;
-  padding:0px;
+    width:55px;
+    height:55px;
+    margin:5px;
+    padding:0px;
   }
 
   #trademark{
@@ -26,6 +17,23 @@ navbar{
     font-weight:400;
     color:white;
   }
+
+  &#front{
+    height: 65px;
+    background: linear-gradient(to left , #175692, #12305e);
+  }
+
+  &#admin{
+    height: 65px;
+    background: linear-gradient(to top , #12305e, #3581cb);
+  }
+  &#sub-admin{
+    height: 40px;
+    background: linear-gradient(to bottom,#505050,#6d6d6d,#7d7c7c,#7d7c7c,#7d7c7c);
+  }
+
+
+
 }
 
 ul.menu {
@@ -35,7 +43,6 @@ ul.menu {
   padding: 0px;
 
   li{
-
     display: inline-block;
     border-left: #70a4db 1px dotted ;
     margin:0px;
@@ -62,12 +69,40 @@ ul.menu {
     &:hover{
       background-color: #175692;
       border-top: #175692 1px solid ;
-      border-bottomt: #175692 1px solid ;
+      border-bottom: #175692 1px solid ;
       }
 
   }
 }
 
+
+ul.submenu {
+  display: block;
+  background-color: transparent;
+  margin: 0px;
+  padding: 0px;
+
+  li{
+    display: inline-block;
+    margin:0px;
+    padding:5px 20px 0px 20px;
+
+
+    a{
+      margin:0px;
+      padding:0px;
+      color: #ffffff;
+    }
+
+    &:hover{
+      background-color: #cdcdcd;
+
+      a {
+        color:#333333;
+      }
+    }
+  }
+}
 
 
 a.navbar-button{

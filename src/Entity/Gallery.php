@@ -29,11 +29,11 @@ class Gallery
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\File")
      */
-    private $Files;
+    private $files;
 
     public function __construct()
     {
-        $this->Files = new ArrayCollection();
+        $this->files = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -45,37 +45,31 @@ class Gallery
     {
         return $this->name;
     }
-
     public function setName(string $name): self
     {
         $this->name = $name;
 
         return $this;
     }
-
     /**
      * @return Collection|File[]
      */
     public function getFiles(): Collection
     {
-        return $this->Files;
+        return $this->files;
     }
-
     public function addFile(File $file): self
     {
-        if (!$this->Files->contains($file)) {
-            $this->Files[] = $file;
+        if (!$this->files->contains($file)) {
+            $this->files[] = $file;
         }
-
         return $this;
     }
-
     public function removeFile(File $file): self
     {
-        if ($this->Files->contains($file)) {
-            $this->Files->removeElement($file);
+        if ($this->files->contains($file)) {
+            $this->files->removeElement($file);
         }
-
         return $this;
     }
 }

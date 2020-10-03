@@ -16,7 +16,7 @@
     <div class="columns width-25">
         {% if app.user %}
         <a href="{{   path('user_logout') }}" id="logout"  class="button navbar-button alert float-right">Deconnexion</a>
-        <a href="{{   path('admin') }}" id="administration"  class="button navbar-button  primary-light   float-right">Administration</a>
+        <a href="{{   path('admin_home') }}" id="administration"  class="button navbar-button  primary-light   float-right">Administration</a>
         {% else %}
         <a href="{{   path('user_login') }}" class="button white navbar-button primary float-right" id="login" >Connexion</a>
         <a href="{{   path('user_register') }}" id="register"  class="button primary-light  navbar-button float-right">S'inscrire</a>
