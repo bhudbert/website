@@ -9,7 +9,7 @@
             <h3>Nouvelle gallerie</h3>
         </div>
         <div class="cell small-6">
-            <a href="{{ path('admin_gallery_home') }}" class="button secondary float-right">Publier</a>
+            <a href="{{ path('admin_global_gallery_home') }}" class="button secondary float-right">Publier</a>
         </div>
     </div>
 
@@ -18,10 +18,10 @@
 
     <br>
     <div class="float-left ">
-        <a href="{{ path('admin_category_edit') }}" class="button alert" type="cancel">Supprimer</a>
+        <a href="{{ path('admin_global_category_edit') }}" class="button alert" type="cancel">Supprimer</a>
     </div>
     <div class="float-right ">
-        <a href="{{ path('admin_category_edit') }}" class="button neutral-light">Annuler</a>
+        <a href="{{ path('admin_global_category_edit') }}" class="button neutral-light">Annuler</a>
         <input class="button success" type="submit" value="Valider">
     </div>
     {{ form_end(galleryForm) }}

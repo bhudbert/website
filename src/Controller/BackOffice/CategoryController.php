@@ -11,12 +11,12 @@ use Symfony\Component\HttpFoundation\Request;
 
 
 /**
- * @Route("/admin/category", name="admin_category")
+ * @Route("/admin/global_settings/category", name="admin_global_category")
  *
  */
 class CategoryController extends AbstractController
 {
-       /**
+       /**"'
      * @var CategoryRepository
      */
     private $repository;

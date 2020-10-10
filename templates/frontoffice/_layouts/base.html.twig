@@ -30,8 +30,16 @@
 {% block javascripts %}{% endblock %}
 <script src="{{   asset("build/app.js") }}"></script>
 <script src="{{   asset("vendor/js/jquery.js") }}"></script>
-<!-- Other JS plugins can be included here -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164939594-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'UA-164939594-2');
+</script>
+<!-- Other JS plugins can be included here -->
 
 </body>
 </html>

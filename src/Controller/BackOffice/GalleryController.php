@@ -11,7 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/admin/gallery", name="admin_gallery")
+ * @Route("/admin/global_settings/gallery", name="admin_global_gallery")
  */
 class GalleryController extends AbstractController
 {

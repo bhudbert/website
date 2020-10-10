@@ -2,7 +2,9 @@
     <div class="columns width-25 ">
         <a href="{{   path('home') }}" id="trademark" >
             <img id="logo" src="{{   asset("img/logo.png") }}">
-            <span>&nbsp;Bruno HUDBERT</span>
+            <span>&nbsp;
+                Bruno HUDBERT
+            </span>
         </a>
     </div>
     <div class="columns width-50 text-center">
@@ -24,13 +26,15 @@
         {% endif %}
     </div>
 </navbar>
-{% if app.request.get('_route') == 'admin_global_settings' %}
+{% set route_name=app.request.get('_route')   %}
+{% set route_name_parts =  route_name |split('_') %}
+ {% if 'global' in route_name_parts %}
     <navbar class="top-bar row" id="sub-admin">
         <div class="columns width-100 text-center">
             <ul class="submenu">
-                <li class=""><a href="{{   path('admin_category_home') }}">Technologies</a></li>
-                <li class=""><a href="{{   path('admin_category_home') }}">Categories</a></li>
-                <li class=""><a href="{{   path('admin_category_home') }}">Galleries</a></li>
+                <li class=""><a href="{{   path('admin_global_category_home') }}">Technologies</a></li>
+                <li class=""><a href="{{   path('admin_global_category_home') }}">Categories</a></li>
+                <li class=""><a href="{{   path('admin_global_gallery_home') }}">Galleries</a></li>
             </ul>
         </div>
 
