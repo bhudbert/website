@@ -61,34 +61,32 @@ class TechnologyController extends AbstractController
             $this->em->persist($technology);
             $this->em->flush();
 
-            return $this->redirectToRoute("admin_technology_home");
+            return $this->redirectToRoute("admin_global_technology_home");
         }
         return $this->render('backoffice/technology/edit.html.twig', [
             "technologyForm"=>$technologyForm->createView(),
         ]);
     }
 
+    /**
+     * @Route("/publish/{id<\d+>?0}", name="_publish")
+     */
+    public function publish()
+    {
+        $technologies = $this->repository->findAll();
+        return $this->render('backoffice/technology/publish.html.twig', [
+            'technologies' => $technologies,
+        ]);
+    }
+
+    /**
+     * @Route("/delete/{id<\d+>?0}", name="_delete")
+     */
     public function delete($id,Request $request)
     {
-        if($id==0) {
-            $technology = new Technology();
-        }
-        else{
-            $technology= $this->repository->find($id);
-        }
-
-        $technologyForm = $this->createForm(TechnologyType::class,$technology);
-
-        $technologyForm->handleRequest($request);
-        if($technologyForm->isSubmitted()){
-            $this->em->persist($technology);
-            $this->em->flush();
-
-            return $this->redirectToRoute("admin_technology_home");
-        }
-        return $this->render('backoffice/technology/edit.html.twig', [
-            "technologyForm"=>$technologyForm->createView(),
-        ]);
+        $this->em->remove($id);
+        $this->em->flush();
+        return $this->render('backoffice/technology/delete.html.twig');
     }
 
 }

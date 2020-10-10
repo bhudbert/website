@@ -12,6 +12,7 @@
             <li><a href="{{   path('admin_blog_home') }}">Blog</a></li>
             <li><a href="{{   path('admin_project_home') }}">Projets</a></li>
             <li><a href="{{   path('admin_trainings_home') }}">Formations</a></li>
+            <li><a href="{{   path('admin_medias_home') }}">Medias</a></li>
             <li class="menu-navbar-item-last"><a href="{{   path('admin_global_settings') }}">Général</a></li>
         </ul>
     </div>
@@ -34,11 +35,21 @@
             <ul class="submenu">
                 <li class=""><a href="{{   path('admin_global_technology_home') }}">Technologies</a></li>
                 <li class=""><a href="{{   path('admin_global_category_home') }}">Categories</a></li>
-                <li class=""><a href="{{   path('admin_global_gallery_home') }}">Galleries</a></li>
             </ul>
         </div>
 
     </navbar>
+{% elseif 'medias' in route_name_parts %}
+<navbar class="top-bar row" id="sub-admin">
+    <div class="columns width-100 text-center">
+        <ul class="submenu">
+            <li class=""><a href="{{   path('admin_medias_gallery_home') }}">Images</a></li>
+            <li class=""><a href="{{   path('admin_medias_gallery_home') }}">Videos</a></li>
+            <li class=""><a href="{{   path('admin_medias_gallery_home') }}">Documents</a></li>
+        </ul>
+    </div>
+
+</navbar>
 {% endif %}
 
 

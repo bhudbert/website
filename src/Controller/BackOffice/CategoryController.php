@@ -69,26 +69,24 @@ class CategoryController extends AbstractController
             "categoryForm"=>$categoryForm->createView(),
         ]);
     }
+
+    /**
+     * @Route("/publish/{id<\d+>?0}", name="_publish")
+     */
+    public function publish()
+    {
+        $technologies = $this->repository->findAll();
+        return $this->render('backoffice/category/publish.html.twig', [
+            'technologies' => $technologies,
+        ]);
+    }
+
+    /**
+     * @Route("/delete/{id<\d+>?0}", name="_delete")
+     */
     public function delete($id,Request $request)
     {
-        if($id==0) {
-            $category = new Category();
-        }
-        else{
-            $category= $this->repository->find($id);
-        }
 
-        $categoryForm = $this->createForm(CategoryType::class,$category);
-
-        $categoryForm->handleRequest($request);
-        if($categoryForm->isSubmitted()){
-            $this->em->persist($category);
-            $this->em->flush();
-
-            return $this->redirectToRoute("admin_category_home");
-        }
-        return $this->render('backoffice/category/edit.html.twig', [
-            "categoryForm"=>$categoryForm->createView(),
-        ]);
+        return $this->render('backoffice/category/delete.html.twig');
     }
  }

@@ -11,7 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/admin/global_settings/gallery", name="admin_global_gallery")
+ * @Route("/admin/medias/gallery", name="admin_medias_gallery")
  */
 class GalleryController extends AbstractController
 {
@@ -71,27 +71,24 @@ class GalleryController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/publish/{id<\d+>?0}", name="_publish")
+     */
+    public function publish()
+    {
+        $technologies = $this->repository->findAll();
+        return $this->render('backoffice/gallery/publish.html.twig', [
+            'technologies' => $technologies,
+        ]);
+    }
+
+    /**
+     * @Route("/delete/{id<\d+>?0}", name="_delete")
+     */
     public function delete($id,Request $request)
     {
-        if($id==0) {
-            $gallery = new Gallery();
-        }
-        else{
-            $gallery= $this->repository->find($id);
-        }
 
-        $galleryForm = $this->createForm(GalleryType::class,$gallery);
-
-        $galleryForm->handleRequest($request);
-        if($galleryForm->isSubmitted()){
-            $this->em->persist($gallery);
-            $this->em->flush();
-
-            return $this->redirectToRoute("admin_gallery_home");
-        }
-        return $this->render('backoffice/gallery/edit.html.twig', [
-            "galleryForm"=>$galleryForm->createView(),
-        ]);
+        return $this->render('backoffice/gallery/delete.html.twig');
     }
 
 }
