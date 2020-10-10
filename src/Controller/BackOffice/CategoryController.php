@@ -3,6 +3,7 @@
 namespace App\Controller\BackOffice;
 
 use App\Entity\Category;
+use App\Form\CategoryType;
 use App\Repository\CategoryRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -16,7 +17,7 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class CategoryController extends AbstractController
 {
-       /**"'
+       /**
      * @var CategoryRepository
      */
     private $repository;
@@ -62,10 +63,10 @@ class CategoryController extends AbstractController
             $this->em->persist($category);
             $this->em->flush();
 
-            return $this->redirectToRoute("admin_category_home");
+            return $this->redirectToRoute("admin_global_category_home");
         }
         return $this->render('backoffice/category/edit.html.twig', [
-            "$categoryForm"=>$categoryForm->createView(),
+            "categoryForm"=>$categoryForm->createView(),
         ]);
     }
     public function delete($id,Request $request)

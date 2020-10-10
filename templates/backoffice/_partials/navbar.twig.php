@@ -32,7 +32,7 @@
     <navbar class="top-bar row" id="sub-admin">
         <div class="columns width-100 text-center">
             <ul class="submenu">
-                <li class=""><a href="{{   path('admin_global_category_home') }}">Technologies</a></li>
+                <li class=""><a href="{{   path('admin_global_technology_home') }}">Technologies</a></li>
                 <li class=""><a href="{{   path('admin_global_category_home') }}">Categories</a></li>
                 <li class=""><a href="{{   path('admin_global_gallery_home') }}">Galleries</a></li>
             </ul>

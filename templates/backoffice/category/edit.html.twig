@@ -1,11 +1,11 @@
-{% extends 'backoffice/_layouts/base.html.twig' with {'page_section': 'admin_global_settings' } %}
+{% extends 'backoffice/_layouts/base.html.twig' %}
 
 {% block title %}{% endblock %}
 
 {% block body %}
     <div class="grid-x">
         <div class="cell small-6 float-left">
-            <h3>Nouveau Post</h3>
+            <h3>Nouvelle Categorie</h3>
         </div>
         <div class="cell small-6">
             <a href="{{ path('admin_global_category_home') }}" class="button secondary float-right">
@@ -19,7 +19,7 @@
 
     <br>
     <div class="float-left ">
-        <a href="{{ path('admin_global_category_home_home') }}" class="button alert" type="cancel">Supprimer</a>
+        <a href="{{ path('admin_global_category_home') }}" class="button alert" type="cancel">Supprimer</a>
     </div>
     <div class="float-right ">
         <a href="{{ path('admin_global_category_home') }}" class="button neutral-light">Annuler</a>
