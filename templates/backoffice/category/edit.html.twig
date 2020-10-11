@@ -1,0 +1,33 @@
+{% extends 'backoffice/_layouts/base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    <div class="grid-x">
+        <div class="cell small-6 float-left">
+            <h3>Editer Categorie</h3>
+        </div>
+        <div class="cell small-6">
+            <a href="{{ path('admin_global_category_home') }}" class="button secondary float-right">
+                Publier
+            </a>
+        </div>
+    </div>
+
+    {{ form_start(categoryForm) }}
+    {{ form_row (categoryForm.name) }}
+
+    <br>
+    <div class="float-left ">
+        <a href="{{ path('admin_global_category_delete') }}" class="button alert" type="cancel">Supprimer</a>
+    </div>
+    <div class="float-right ">
+        <a href="{{ path('admin_global_category_home') }}" class="button neutral-light">Annuler</a>
+        <input class="button success" type="submit" value="Valider">
+
+    </div>
+
+    {{ form_end(categoryForm) }}
+
+
+{% endblock %}

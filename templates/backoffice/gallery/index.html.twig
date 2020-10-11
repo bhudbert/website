@@ -1,0 +1,29 @@
+{% extends 'backoffice/_layouts/base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+
+{% block body %}
+
+    <div class="grid-x">
+        <div class="cell small-6"><h3>Galleries</h3></div>
+        <div class="cell small-6">  <a href="{{   path('admin_medias_gallery_edit') }}" class="button success float-right margin-right-1"> Ajouter</a></div>
+    </div>
+
+    <table>
+        <thead>
+        <td>Id</td> <td>Nom</td><td>&nbsp;</td>
+        </thead>
+        {% for gallery in galleries %}
+            <tr>
+                <td class="width-25">{{ gallery.id }}</td>
+                <td class="width-25">{{ gallery.name }}</td>
+                <td class="width-50">
+                    <a href="{{   path('admin_medias_gallery_edit',{'id':gallery.id}) }}" class="button small primary float-right"> Editer</a>
+                    <a href="{{   path('admin_medias_gallery_publish',{'id':gallery.id}) }}" class="button neutral small float-right"> Publier</a>
+                    <a href="{{   path('admin_medias_gallery_delete',{'id':gallery.id}) }}" class="button small alert  float-right"> Supprimer</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
