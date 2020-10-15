@@ -7,7 +7,7 @@
             </span>
         </a>
     </div>
-    <div class="columns width-50 text-cente
+    <div class="columns width-50 text-center">
         <ul class="menu">
             <li><a href="{{   path('admin_blog_home') }}">Blog</a></li>
             <li><a href="{{   path('admin_project_home') }}">Projets</a></li>
