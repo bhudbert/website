@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\BackOffice;
+namespace App\Controller\BackOffice\Settings;
 
 use App\Entity\Technology;
 use App\Form\TechnologyType;
@@ -10,7 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 /**
- * @Route("/admin/global_settings/technology", name="admin_global_technology")
+ * @Route("/admin/settings/technology", name="admin_settings_technology")
  */
 class TechnologyController extends AbstractController
 {

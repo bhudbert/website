@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\BackOffice;
+namespace App\Controller\BackOffice\Settings;
 
 use App\Entity\Category;
 use App\Form\CategoryType;
@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 
 /**
- * @Route("/admin/global_settings/category", name="admin_global_category")
+ * @Route("/admin/Settings/category", name="admin_settings_category")
  *
  */
 class CategoryController extends AbstractController

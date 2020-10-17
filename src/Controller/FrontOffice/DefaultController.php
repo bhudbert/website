@@ -12,6 +12,13 @@ class DefaultController extends AbstractController
      */
     public function index()
     {
-        return $this->render('frontoffice/main/index.html.twig');
+        if(  $_ENV['MAINTENANCE']=='true')
+        {
+            return $this->render('frontoffice/main/maintenance.html.twig');
+        }
+      else
+        {
+            return $this->render('frontoffice/main/index.html.twig');
+        }
     }
 }

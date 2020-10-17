@@ -13,7 +13,7 @@
             <li><a href="{{   path('admin_project_home') }}">Projets</a></li>
             <li><a href="{{   path('admin_trainings_home') }}">Formations</a></li>
             <li><a href="{{   path('admin_medias_home') }}">Medias</a></li>
-            <li class="menu-navbar-item-last"><a href="{{   path('admin_global_settings') }}">Général</a></li>
+            <li class="menu-navbar-item-last"><a href="{{   path('admin_settings_home') }}">Général</a></li>
         </ul>
     </div>
     <div class="columns width-25">
@@ -29,12 +29,12 @@
 </navbar>
 {% set route_name=app.request.get('_route')   %}
 {% set route_name_parts =  route_name |split('_') %}
- {% if 'global' in route_name_parts %}
+ {% if 'settings' in route_name_parts %}
     <navbar class="top-bar row" id="sub-admin">
         <div class="columns width-100 text-center">
             <ul class="submenu">
-                <li class=""><a href="{{   path('admin_global_technology_home') }}">Technologies</a></li>
-                <li class=""><a href="{{   path('admin_global_category_home') }}">Categories</a></li>
+                <li class=""><a href="{{   path('admin_settings_technology_home') }}">Technologies</a></li>
+                <li class=""><a href="{{   path('admin_settings_category_home') }}">Categories</a></li>
             </ul>
         </div>
 

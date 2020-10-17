@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\BackOffice;
+namespace App\Controller\BackOffice\Medias;
 
 use App\Entity\Gallery;
 use App\Form\GalleryType;
@@ -41,7 +41,7 @@ class GalleryController extends AbstractController
     {
 
         $galleries = $this->repository->findAll();
-        return $this->render('backoffice/gallery/index.html.twig', [
+        return $this->render('backoffice/medias/gallery/index.html.twig', [
             'galleries' => $galleries,
         ]);
     }
@@ -64,9 +64,9 @@ class GalleryController extends AbstractController
             $this->em->persist($gallery);
             $this->em->flush();
 
-            return $this->redirectToRoute("admin_gallery_home");
+            return $this->redirectToRoute("admin_medias_gallery_home");
         }
-        return $this->render('backoffice/gallery/edit.html.twig', [
+        return $this->render('backoffice/medias/gallery/edit.html.twig', [
             "galleryForm"=>$galleryForm->createView(),
         ]);
     }
@@ -77,7 +77,7 @@ class GalleryController extends AbstractController
     public function publish()
     {
         $technologies = $this->repository->findAll();
-        return $this->render('backoffice/gallery/publish.html.twig', [
+        return $this->render('backoffice/medias/gallery/publish.html.twig', [
             'technologies' => $technologies,
         ]);
     }
@@ -88,7 +88,7 @@ class GalleryController extends AbstractController
     public function delete($id,Request $request)
     {
 
-        return $this->render('backoffice/gallery/delete.html.twig');
+        return $this->render('backoffice/medias/gallery/delete.html.twig');
     }
 
 }

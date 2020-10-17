@@ -17,26 +17,13 @@ class DefaultController extends AbstractController
     {
         return $this->render('backoffice/default/index.html.twig');
     }
-    /**
- * @Route("/", name="")
- */
-    public function index2()
-    {
-        return $this->render('backoffice/default/index.html.twig');
-    }
-    /**
-     * @Route("/global_settings", name="global_settings")
-     */
-    public function index3()
-    {
-        return $this->render('backoffice/default/index.html.twig');
-    }
 
     /**
-     * @Route("/medias", name="medias_home")
+     * @Route("/medias/home", name="medias_home")
      */
     public function medias()
     {
         return $this->render('backoffice/default/index.html.twig');
     }
+
 }
