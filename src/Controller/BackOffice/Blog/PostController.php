@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\BackOffice;
+namespace App\Controller\BackOffice\Blog;
 
 use App\Entity\Post;
 use App\Form\PostType;
