@@ -21,7 +21,7 @@ class GalleryController extends AbstractController
      */
     private $repository;
 
-    /**dmin/category/?id=1
+    /**
      * @var EntityManagerInterface
      */
     private $em;
