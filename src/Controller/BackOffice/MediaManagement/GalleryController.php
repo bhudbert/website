@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\BackOffice\Medias;
+namespace App\Controller\BackOffice\MediaManagement;
 
 use App\Entity\Gallery;
 use App\Form\GalleryType;

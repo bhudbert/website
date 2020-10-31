@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Controller\BackOffice\Medias;
+namespace App\Controller\BackOffice\MediaManagement;
 
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/admin/medias", name="admin_medias_")
+ * @Route("/admin/media", name="admin_medias_")
  *
  */
 class DefaultController extends AbstractController

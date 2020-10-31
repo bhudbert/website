@@ -12,7 +12,7 @@ import '../css/app.scss';
  import App from './components/testComponent';
 
 
- new Vue({
+ const app = new Vue({
 
      el: '#app',
      render: h => h(App)

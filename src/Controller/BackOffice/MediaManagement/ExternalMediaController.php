@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\BackOffice\Medias;
+namespace App\Controller\BackOffice\MediaManagement;
 
 use App\Entity\File;
 use App\Form\FileType;
@@ -13,9 +13,8 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * @Route("/admin/medias/file", name="admin_medias_file")
  */
-class FileController extends AbstractController
+class ExternalMediaController extends AbstractController
 {
-
     /**
      * @var FileRepository
      */
