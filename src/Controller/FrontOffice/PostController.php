@@ -36,7 +36,7 @@ class PostController extends AbstractController
     public function index()
     {
         $posts = $this->repository->findAll();
-        return $this->render('frontoffice/post/index.html.twig', [
+        return $this->render('frontoffice/blog/index.html.twig', [
             'posts' => $posts,
         ]);
     }
