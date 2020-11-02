@@ -38,7 +38,7 @@ class TechnologyController extends AbstractController
      public function index()
     {
         $technologies = $this->repository->findAll();
-        return $this->render('backoffice/technology/index.html.twig', [
+        return $this->render('backoffice/settings/technology/index.html.twig', [
             'technologies' => $technologies,
         ]);
     }
@@ -61,9 +61,9 @@ class TechnologyController extends AbstractController
             $this->em->persist($technology);
             $this->em->flush();
 
-            return $this->redirectToRoute("admin_global_technology_home");
+            return $this->redirectToRoute("admin_settings_technology_home");
         }
-        return $this->render('backoffice/technology/edit.html.twig', [
+        return $this->render('backoffice/settings/technology/edit.html.twig', [
             "technologyForm"=>$technologyForm->createView(),
         ]);
     }
@@ -74,7 +74,7 @@ class TechnologyController extends AbstractController
     public function publish()
     {
         $technologies = $this->repository->findAll();
-        return $this->render('backoffice/technology/publish.html.twig', [
+        return $this->render('backoffice/settings/technology/publish.html.twig', [
             'technologies' => $technologies,
         ]);
     }
@@ -86,7 +86,7 @@ class TechnologyController extends AbstractController
     {
         $this->em->remove($id);
         $this->em->flush();
-        return $this->render('backoffice/technology/delete.html.twig');
+        return $this->render('backoffice/settings/technology/delete.html.twig');
     }
 
 }

@@ -2,7 +2,7 @@
 
 namespace App\Form;
 
-use App\Entity\File;
+use App\Entity\Media;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -26,7 +26,7 @@ class FileType extends AbstractType
                 // unmapped fields can't define their validation using annotations
                 // in the associated entity, so you can use the PHP constraint classes
                 'constraints' => [
-                    new File([
+                    new Media([
                         'maxSize' => '1024k',
                         'mimeTypes' => [
                             'application/pdf',
@@ -42,7 +42,7 @@ class FileType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => File::class,
+            'data_class' => Media::class,
         ]);
     }
 }

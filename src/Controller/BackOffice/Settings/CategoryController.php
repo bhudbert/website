@@ -39,7 +39,7 @@ class CategoryController extends AbstractController
     public function index()
     {
         $categories = $this->repository->findAll();
-        return $this->render('backoffice/category/index.html.twig', [
+        return $this->render('backoffice/settings/category/index.html.twig', [
             'categories' => $categories,
         ]);
     }
@@ -63,9 +63,9 @@ class CategoryController extends AbstractController
             $this->em->persist($category);
             $this->em->flush();
 
-            return $this->redirectToRoute("admin_global_category_home");
+            return $this->redirectToRoute("admin_settings_category_home");
         }
-        return $this->render('backoffice/category/edit.html.twig', [
+        return $this->render('backoffice/settings/category/edit.html.twig', [
             "categoryForm"=>$categoryForm->createView(),
         ]);
     }
@@ -76,7 +76,7 @@ class CategoryController extends AbstractController
     public function publish()
     {
         $technologies = $this->repository->findAll();
-        return $this->render('backoffice/category/publish.html.twig', [
+        return $this->render('backoffice/settings/category/publish.html.twig', [
             'technologies' => $technologies,
         ]);
     }
@@ -87,6 +87,6 @@ class CategoryController extends AbstractController
     public function delete($id,Request $request)
     {
 
-        return $this->render('backoffice/category/delete.html.twig');
+        return $this->render('backoffice/settings/category/delete.html.twig');
     }
  }

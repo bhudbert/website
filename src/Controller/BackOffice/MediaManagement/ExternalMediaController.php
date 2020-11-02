@@ -2,7 +2,7 @@
 
 namespace App\Controller\BackOffice\MediaManagement;
 
-use App\Entity\File;
+use App\Entity\Media;
 use App\Form\FileType;
 use App\Repository\FileRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -50,7 +50,7 @@ class ExternalMediaController extends AbstractController
     public function edit($id,Request $request)
     {
         if($id==0) {
-            $file = new File();
+            $file = new Media();
         }
         else{
             $file= $this->repository->find($id);

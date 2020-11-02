@@ -27,13 +27,13 @@ class Gallery
     private $name;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\File")
+     * @ORM\ManyToMany(targetEntity="Media")
      */
-    private $files;
+    private $medias;
 
     public function __construct()
     {
-        $this->files = new ArrayCollection();
+        $this->medias = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -52,23 +52,23 @@ class Gallery
         return $this;
     }
     /**
-     * @return Collection|File[]
+     * @return Collection|Media[]
      */
-    public function getFiles(): Collection
+    public function getMedias(): Collection
     {
-        return $this->files;
+        return $this->medias;
     }
-    public function addFile(File $file): self
+    public function addFile(Media $media): self
     {
-        if (!$this->files->contains($file)) {
-            $this->files[] = $file;
+        if (!$this->media->contains($media)) {
+            $this->media[] = $media;
         }
         return $this;
     }
-    public function removeFile(File $file): self
+    public function removeFile(Media $media): self
     {
-        if ($this->files->contains($file)) {
-            $this->files->removeElement($file);
+        if ($this->medias->contains($media)) {
+            $this->medias->removeElement($media);
         }
         return $this;
     }
