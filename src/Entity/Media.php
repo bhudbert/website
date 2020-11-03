@@ -7,7 +7,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Table(name="medias")
- * @ORM\Entity(repositoryClass="App\Repository\FileRepository")
+ * @ORM\Entity(repositoryClass="MediaRepository")
  * @UniqueEntity("name",message="Attention un fichier du meme nom existe deja")
  */
 class Media

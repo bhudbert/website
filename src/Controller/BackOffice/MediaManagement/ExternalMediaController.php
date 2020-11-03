@@ -4,7 +4,7 @@ namespace App\Controller\BackOffice\MediaManagement;
 
 use App\Entity\Media;
 use App\Form\FileType;
-use App\Repository\FileRepository;
+use App\Repository\MediaRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ExternalMediaController extends AbstractController
 {
     /**
-     * @var FileRepository
+     * @var MediaRepository
      */
     private $repository;
 
@@ -25,7 +25,7 @@ class ExternalMediaController extends AbstractController
      */
     private $em;
 
-    public function __construct(FileRepository $repository,EntityManagerInterface $em)
+    public function __construct(MediaRepository $repository, EntityManagerInterface $em)
     {
         $this->repository = $repository;
         $this->em = $em;

@@ -12,7 +12,7 @@ use Doctrine\Persistence\ManagerRegistry;
  * @method Media[]    findAll()
  * @method Media[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class FileRepository extends ServiceEntityRepository
+class MediaRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {

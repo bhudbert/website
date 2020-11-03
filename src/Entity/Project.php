@@ -7,10 +7,10 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Table(name="projects")
- * @ORM\Entity(repositoryClass="App\Repository\ProjectsRepository")
+ * @ORM\Entity(repositoryClass="ProjectRepository")
  * @UniqueEntity("name",message="Attention un projet du meme nom existe deja")
  */
-class Projects
+class Project
 {
     /**
      * @ORM\Id()
