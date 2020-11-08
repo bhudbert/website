@@ -7,28 +7,30 @@ use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method Gallery|null find($id, $lockMode = null, $lockVersion = null)
- * @method Gallery|null findOneBy(array $criteria, array $orderBy = null)
- * @method Gallery[]    findAll()
- * @method Gallery[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Gallery|null find($id, $lockmode = null, $lockversion = null)
+ * @method Gallery|null findoneby(array $criteria, array $orderby = null)
+ * @method Gallery[]    findall()
+ * @method Gallery[]    findby(array $criteria, array $orderby = null, $limit = null, $offset = null)
  */
 class GalleryRepository extends ServiceEntityRepository
 {
+
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Gallery::class);
     }
 
+
     // /**
-    //  * @return Gallery[] Returns an array of Gallery objects
+    //  * @return File[] Returns an array of File objects
     //  */
     /*
     public function findByExampleField($value)
     {
-        return $this->createQueryBuilder('g')
-            ->andWhere('g.exampleField = :val')
+        return $this->createQueryBuilder('f')
+            ->andWhere('f.exampleField = :val')
             ->setParameter('val', $value)
-            ->orderBy('g.id', 'ASC')
+            ->orderBy('f.id', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult()
@@ -37,10 +39,10 @@ class GalleryRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?Gallery
+    public function findOneBySomeField($value): ?File
     {
-        return $this->createQueryBuilder('g')
-            ->andWhere('g.exampleField = :val')
+        return $this->createQueryBuilder('f')
+            ->andWhere('f.exampleField = :val')
             ->setParameter('val', $value)
             ->getQuery()
             ->getOneOrNullResult()

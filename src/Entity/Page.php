@@ -38,7 +38,7 @@ class Page
     private $description;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Content")
      */
     private $content;
 
