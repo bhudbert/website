@@ -31,9 +31,15 @@ class Gallery
      */
     private $medias;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Content::class, mappedBy="galleries")
+     */
+    private $contents;
+
     public function __construct()
     {
         $this->medias = new ArrayCollection();
+        $this->contents = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -70,6 +76,33 @@ class Gallery
         if ($this->medias->contains($media)) {
             $this->medias->removeElement($media);
         }
+        return $this;
+    }
+
+    /**
+     * @return Collection|Content[]
+     */
+    public function getContents(): Collection
+    {
+        return $this->contents;
+    }
+
+    public function addContent(Content $content): self
+    {
+        if (!$this->contents->contains($content)) {
+            $this->contents[] = $content;
+            $content->addGallery($this);
+        }
+
+        return $this;
+    }
+
+    public function removeContent(Content $content): self
+    {
+        if ($this->contents->removeElement($content)) {
+            $content->removeGallery($this);
+        }
+
         return $this;
     }
 }

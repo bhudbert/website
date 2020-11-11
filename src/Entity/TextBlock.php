@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\TextBlockRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -31,6 +33,16 @@ class TextBlock
      * @ORM\Column(type="boolean")
      */
     private $published;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Content::class, mappedBy="textblocks")
+     */
+    private $contents;
+
+    public function __construct()
+    {
+        $this->contents = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -69,6 +81,33 @@ class TextBlock
     public function setPublished(bool $published): self
     {
         $this->published = $published;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Content[]
+     */
+    public function getContents(): Collection
+    {
+        return $this->contents;
+    }
+
+    public function addContent(Content $content): self
+    {
+        if (!$this->contents->contains($content)) {
+            $this->contents[] = $content;
+            $content->addTextblock($this);
+        }
+
+        return $this;
+    }
+
+    public function removeContent(Content $content): self
+    {
+        if ($this->contents->removeElement($content)) {
+            $content->removeTextblock($this);
+        }
 
         return $this;
     }
