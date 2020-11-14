@@ -22,6 +22,7 @@
     },
     "dependencies": {
         "autoprefixer": "^9.8.6",
+        "axios": "^0.21.0",
         "foundation-sites": "^6.6.3",
         "jquery": "^3.5.1",
         "motion-ui": "^2.0.3",

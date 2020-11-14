@@ -9,6 +9,9 @@
 import '../css/app.scss';
 
  import Vue from 'vue';
+
+
+
  import OtherApplication from './components/other-application/bootComponent';
  import ContentManager from './components/content-manager/bootComponent';
 

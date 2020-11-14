@@ -9,10 +9,24 @@
 
 import buttonComponent from './buttonComponent'
 
+import axios from "axios";
+
 export default {
   name: "bootComponent",
   components: {
     buttonComponent,
+  },
+  data(){
+    return {
+      tasks:[],
+      taskToEdit:{},
+      reveleModalEditTask:false
+    }
+  },
+  mounted() {
+    axios.get('/api/contents')
+        .then( response => (this.tasks=response.data))
+        .catch(error => console.log(error))
   }
 }
 </script>
