@@ -9,15 +9,15 @@
 import '../css/app.scss';
 
  import Vue from 'vue';
- import App from './components/testComponent';
+ import OtherApplication from './components/other-application/bootComponent';
+ import ContentManager from './components/content-manager/bootComponent';
 
-
- const app = new Vue({
-
-     el: '#app',
-     render: h => h(App)
+ const otherApplication = new Vue({
+     el: '#other-application',
+     render: h => h(OtherApplication),
  });
 
-
-// Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
-// import $ from 'jquery';
+ const contentManager = new Vue({
+     el: '#content-manager',
+     render: h => h(ContentManager),
+ });

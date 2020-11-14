@@ -54,13 +54,15 @@ class PostController extends AbstractController
         else{
             $post= $this->repository->find($id);
         }
-
         $postForm = $this->createForm(PostType::class,$post);
 
         $postForm->handleRequest($request);
         if($postForm->isSubmitted()){
             $this->em->persist($post);
             $this->em->flush();
+             //TODO - Add post's content
+
+
 
             return $this->redirectToRoute("admin_blog_home");
         }
@@ -68,49 +70,13 @@ class PostController extends AbstractController
             "postForm"=>$postForm->createView(),
         ]);
     }
-    public function delete($id,Request $request)
+    public function delete($id)
     {
-        if($id==0) {
-            $post = new Post();
-        }
-        else{
-            $post= $this->repository->find($id);
-        }
-
-        $postForm = $this->createForm(PostType::class,$post);
-
-        $postForm->handleRequest($request);
-        if($postForm->isSubmitted()){
-            $this->em->persist($post);
-            $this->em->flush();
-
-            return $this->redirectToRoute("admin_blog_home");
-        }
-        return $this->render('backoffice/post/edit.html.twig', [
-            "postForm"=>$postForm->createView(),
-        ]);
+        $post= $this->repository->find($id);
     }
 
-    public function publish($id,Request $request)
+    public function publish($id)
     {
-        if($id==0) {
-            $post = new Post();
-        }
-        else{
-            $post= $this->repository->find($id);
-        }
-
-        $postForm = $this->createForm(PostType::class,$post);
-
-        $postForm->handleRequest($request);
-        if($postForm->isSubmitted()){
-            $this->em->persist($post);
-            $this->em->flush();
-
-            return $this->redirectToRoute("admin_blog_home");
-        }
-        return $this->render('backoffice/post/edit.html.twig', [
-            "postForm"=>$postForm->createView(),
-        ]);
+        $post= $this->repository->find($id);
     }
 }
