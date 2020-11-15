@@ -13,15 +13,17 @@
         </div>
     </div>
 
-    {{ form_start(postForm) }}
-    {{ form_row (postForm.name) }}
-    {{ form_row (postForm.title) }}
-    {{ form_row (postForm.slug) }}
-    {{ form_row (postForm.description) }}
-    {{ form_row (postForm.category) }}
-    {{ form_row (postForm.content) }}
 
-    <br>
+                {{ form_start(postForm) }}
+                {{ form_row (postForm.name) }}
+                {{ form_row (postForm.title) }}
+                {{ form_row (postForm.slug) }}
+                {{ form_row (postForm.description) }}
+                {{ form_row (postForm.category) }}
+                    {#  Content will manage by management-content's Vue.js application  #}
+                    {#  {{ form_row (postForm.content) }} #}
+
+   <br>
     <div class="float-left ">
         <a href="{{ path('admin_blog_home') }}" class="button alert" type="cancel">Supprimer</a>
     </div>
@@ -32,8 +34,7 @@
     </div>
 
     {{ form_end(postForm) }}
-
-    <div id="app-content">
-
+    <br><br><br>
+    <div id="content-manager">
     </div>
 {% endblock %}

@@ -8,12 +8,14 @@
 // any CSS you import will output into a single css file (app.css in this case)
 import '../css/app.scss';
 
- import Vue from 'vue';
+
+import Vue from 'vue';
+import Foundation from 'foundation-sites';
 
 
-
- import OtherApplication from './components/other-application/bootComponent';
- import ContentManager from './components/content-manager/bootComponent';
+// Import fo Vue.js Apps
+import OtherApplication from './components/other-application/bootComponent';
+import ContentManager from './components/content-manager/bootComponent';
 
  const otherApplication = new Vue({
      el: '#other-application',

@@ -2,6 +2,7 @@
     "devDependencies": {
         "@symfony/webpack-encore": "^0.30.0",
         "core-js": "^3.7.0",
+        "motion-ui": "^2.0.3",
         "node-sass": "^4.14.1",
         "regenerator-runtime": "^0.13.2",
         "sass-loader": "^8.0.2",
@@ -25,7 +26,6 @@
         "axios": "^0.21.0",
         "foundation-sites": "^6.6.3",
         "jquery": "^3.5.1",
-        "motion-ui": "^2.0.3",
         "vuejs": "^3.0.1"
     }
 }

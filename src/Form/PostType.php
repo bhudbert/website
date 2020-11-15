@@ -26,7 +26,7 @@ class PostType extends AbstractType
                 'label'=>'Categorie',
                 //'expanded'     => true,
                 'multiple'     => true  ])
-            ->add('content', CKEditorType::class,['label'=> 'Contenu' ])
+     //       ->add('content', CKEditorType::class,['label'=> 'Contenu' ])
         ;
     }
 
