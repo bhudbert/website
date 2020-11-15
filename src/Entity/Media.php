@@ -2,13 +2,19 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
+
  * @ORM\Table(name="medias")
- * @ORM\Entity(repositoryClass="MediaRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\MediaRepository")
  * @UniqueEntity("name",message="Attention un fichier du meme nom existe deja")
+ * @ApiResource(
+ *     collectionOperations={"get"},
+ *     itemOperations={"get"}
+ *     )
  */
 class Media
 {

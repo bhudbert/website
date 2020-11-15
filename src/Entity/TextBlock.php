@@ -35,13 +35,15 @@ class TextBlock
     private $published;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Content::class, mappedBy="textblocks")
+     * @ORM\ManyToOne(targetEntity=Post::class, inversedBy="textBlocks")
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $contents;
+    private $post;
+
+
 
     public function __construct()
     {
-        $this->contents = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -85,30 +87,16 @@ class TextBlock
         return $this;
     }
 
-    /**
-     * @return Collection|Content[]
-     */
-    public function getContents(): Collection
+    public function getPost(): ?Post
     {
-        return $this->contents;
+        return $this->post;
     }
 
-    public function addContent(Content $content): self
+    public function setPost(?Post $post): self
     {
-        if (!$this->contents->contains($content)) {
-            $this->contents[] = $content;
-            $content->addTextblock($this);
-        }
+        $this->post = $post;
 
         return $this;
     }
 
-    public function removeContent(Content $content): self
-    {
-        if ($this->contents->removeElement($content)) {
-            $content->removeTextblock($this);
-        }
-
-        return $this;
-    }
 }

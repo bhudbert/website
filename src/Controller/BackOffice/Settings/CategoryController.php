@@ -17,7 +17,7 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class CategoryController extends AbstractController
 {
-       /**
+     /**
      * @var CategoryRepository
      */
     private $repository;

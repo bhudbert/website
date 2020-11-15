@@ -32,15 +32,10 @@ class Page
      */
     private $slug;
 
-    /**Gallery
+    /**
      * @ORM\Column(type="text")
      */
     private $description;
-
-    /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Content")
-     */
-    private $content;
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Technology")
@@ -99,17 +94,6 @@ class Page
         return $this;
     }
 
-    public function getContent(): ?string
-    {
-        return $this->content;
-    }
-
-    public function setContent(string $content): self
-    {
-        $this->content = $content;
-
-        return $this;
-    }
 
     /**
      * @return Collection|Technology[]

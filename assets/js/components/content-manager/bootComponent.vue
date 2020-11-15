@@ -24,7 +24,7 @@ export default {
     }
   },
   mounted() {
-    axios.get('/api/contents')
+    axios.get('/api/media/3')
         .then( response => (this.tasks=response.data))
         .catch(error => console.log(error))
   }
