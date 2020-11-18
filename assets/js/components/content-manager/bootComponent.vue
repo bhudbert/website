@@ -1,7 +1,8 @@
 <template>
   <div>
-    <button class="button warning">Creation de contenu</button>
-    <button-component></button-component>
+    <button class="button primary">Ajouter paragraphe</button>
+    <button class="button neutral">Ajouter gallerie</button>
+    <button-component ></button-component>
   </div>
 </template>
 
